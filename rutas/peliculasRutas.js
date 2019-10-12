@@ -1,7 +1,7 @@
 "use strict";
 const express = require("express");
 const router = express.Router();
-const Peliculas = require("../modelo/peliculasModelo");
+const Peliculas = require("../modelo/peliculasModelo.js");
 
 // AGREGAR POST / CREATE
 
