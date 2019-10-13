@@ -3,6 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const route = require("./rutas/peliculasRutas");
+const routeActor = require("./rutas/actorRutas");
 const colors = require("colors");
 const app = express();
 const PORT = 8080;
@@ -24,6 +25,7 @@ mongoose
 
 app.use(bodyParser.json());
 app.use("/api", route);
+app.use("/api", routeActor);
 app.use((err, req, res, next) => {
   res.status(422).send({ error: err.message });
 });
